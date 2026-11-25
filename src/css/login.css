@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #eef2f7;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  /* El padding derecho (540px) reserva el espacio exacto de la mitad derecha para la foto */
+  padding: 44px 540px 44px 44px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  text-align: left;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+/* Espacio reservado para la foto en la mitad derecha (sin cambiar tu HTML) */
+.login-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  /* Color/degradado temporal mientras no pones foto */
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 55%, #0284c7 100%);
+  /* Cuando quieras poner la foto, borra la línea de arriba y descomenta esta: */
+  /* background: url("ruta-de-tu-foto.jpg") center / cover no-repeat; */
+}
+
+/* Marca */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #0ea5e9;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.35);
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.brand-sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Encabezado */
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #0284c7;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+/* Campos */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+}
+
+.input-icon {
+  display: flex;
+  color: #94a3b8;
+}
+
+.input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+.input-wrapper.is-disabled {
+  background: #f8fafc;
+}
+
+.input-wrapper.is-disabled input {
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* Botón */
+.btn-primary {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 14px;
+  background: #0ea5e9;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(14, 165, 233, 0.35);
+  transition:
+    background 0.15s,
+    transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: #0284c7;
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+/* Crear cuenta */
+.signup-row {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.signup-row a {
+  color: #0284c7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-row a:hover {
+  text-decoration: underline;
+}
+
+/* Pie */
+.login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* Pantallas medianas y pequeñas: oculta el espacio de foto y centra el formulario */
+@media (max-width: 900px) {
+  .login-card {
+    max-width: 460px;
+    padding: 40px;
+  }
+
+  .login-card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 22px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
